@@ -11,7 +11,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "npm start"
+    "start": "nodemon server-db.js"
   },
   "repository": {
     "type": "git",
