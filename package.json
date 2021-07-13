@@ -1,0 +1,26 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "chats-db.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.13"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doriroz/netapp-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doriroz/netapp-server/issues"
+  },
+  "homepage": "https://github.com/doriroz/netapp-server#readme"
+}
