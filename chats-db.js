@@ -17,6 +17,7 @@ let Chat = mongoose.model("Chat", chatSchema);
 
 function getAll(req, res) {
   Chat.find()
+
     // .populate("userIds", "userName")
     .then((data) => res.json(data));
 }

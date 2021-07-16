@@ -16,15 +16,19 @@ module.exports.userSchema = userSchema;
 let User = mongoose.model("User", userSchema);
 
 function getAll(req, res) {
-  let regExp = new RegExp(req.body.search, "i");
+  let regExp = new RegExp(req.query.search, "i");
   let filter = {};
-  if (req.body.search) {
-    filter = { $or: [{ firstName: regExp, lastName: regExp }] };
+  if (req.query.search) {
+    console.log(req.query.search);
+    filter = { $or: [{ firstName: regExp }, { lastName: regExp }] };
     // 2) filter = { firstName: regExp };
-    // 1) filter = { firstName: req.body.search };
+    // 1) filter = { firstName: req.query.search };
   }
 
-  User.find(filter).then((result) => res.json(result));
+  User.find(filter).then((result) => {
+    console.log(result);
+    res.json(result);
+  });
 }
 
 function getUserbyIdPrm(req, res) {
