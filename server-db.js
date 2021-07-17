@@ -24,8 +24,8 @@ const urlToMongo =
 
 app.use(express.json()); //this make it to proccess json request
 
-// app.listen(process.env.PORT || 8080, () => console.log("Server is up"));
-app.listen(8080, () => console.log("Server is up"));
+app.listen(process.env.PORT || 8080, () => console.log("Server is up"));
+// app.listen(8080, () => console.log("Server is up"));
 
 mongoose
   .connect(urlToMongo, {
