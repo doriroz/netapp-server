@@ -54,10 +54,23 @@ function creatChat(req, res) {
     });
 }
 
+function removeChats(req, res) {
+  Chat.findByIdAndRemove(req.params.id)
+    .then((ch) => {
+      if (ch) {
+        res.send(ch);
+      } else {
+        res.status(404).send("Chat" + req.params.id + "was not found");
+      }
+    })
+    .catch((err) => res.status(500).send("Internal error " + err));
+}
+
 module.exports.getAll = getAll;
 module.exports.getById = getById;
 module.exports.createChat = creatChat;
 module.exports.getFriends = getFriends;
+module.exports.removeChats = removeChats;
 // This is the structure for insert new chat in Postman
 // {
 //   "userIds":[

@@ -26,7 +26,7 @@ function getAll(req, res) {
   }
 
   User.find(filter).then((result) => {
-    console.log(result);
+    // console.log(result);
     res.json(result);
   });
 }

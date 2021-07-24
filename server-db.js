@@ -62,6 +62,8 @@ app.get("/api/chats", chats.getAll);
 
 app.get("/api/chats/:id", chats.getById);
 
+app.delete("/api/chats/:id", chats.removeChats);
+
 app.post("/api/chats", chats.createChat);
 
 app.get("/api/friends/:id", chats.getFriends);
